@@ -1,66 +1,211 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> YouTube.com clone</title>
-    <style>
-      .thumbnail
-      {
-        display:inline-block;
-       width: 250px;
-       height: 200px;
-       object-fit: cover;
-       margin-top: 15px;
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YouTube.com Clone</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+
+  <style>
+
+    p {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    /* Search bar */
+    .search-bar {
+      font-size: 20px;
+      margin-left: 15px;
+      display: block;
+    }
+
+    /* Video card */
+    .video-preview {
+      width: 300px;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 15px;
+    }
+
+    /* Thumbnail */
+    .thumbnail {
+      display: block;
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .thumbnail-row {
+      margin-bottom: 10px;
+    }
+
+    /* Channel picture */
+    .channel-picture {
       
-       
+    }
 
-      }
-      .intro
-      {
-        width :300px;
-        margin: left 15px;
-      }
+    .profile-picture {
+      width: 100%;
+      border-radius: 40px;
+      display: block;
+    }
 
-     
-
-      .search-bar
-      {
-        font-size: 20px;
-        margin: left 15px;
-        display:block;
-        
-      }
+    /* Video information */
+    .video-info {
       
-      .video-preview
-      {
-        width: 300px;
-        display: inline-block;
-        vertical-align: top;
-        margin-right: 15px;
-      }
-    </style>
-  </head>
-  <body>
-    <input class="search-bar" type="text" placeholder="Search">
-    
+    }
 
-    <div class="video-preview">
-      <img  class="thumbnail"src="files/hq720.avif">
-    
-    
-    <p class="intro">Best diet for Bulking </p>
-    <p class="Author">Sam Sulek</p>
-    <p class="Stats">3.4M views &middot; 6 months ago</p>
-      
+    .intro {
+      margin-top: 0;
+    }
+
+    .Author,
+    .Stats {
+      font-size: 12px;
+      color: rgb(96, 96, 96);
+    }
+
+    .Author {
+      margin-bottom: 4px;
+    }
+
+    /* Channel picture + video information */
+    .video-info-grid {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      column-gap: 10px;
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <!-- Search -->
+  <input
+    class="search-bar"
+    type="text"
+    placeholder="Search"
+  >
+
+
+  <!-- ================= VIDEO 1 ================= -->
+
+  <div class="video-preview">
+
+    <!-- Thumbnail -->
+    <div class="thumbnail-row">
+
+      <img
+        class="thumbnail"
+        src="files/hq720.avif"
+      >
+
     </div>
-     <div class="video-preview">
-      <img  class="thumbnail"src="files/hqdefault.avif">
-    
-    
-    <p class="intro">Glow up Tips</strong></p>
-    <p class="Author">Alexzander</p>
-    <p class="Stats">3.9M views &middot; 9 months ago</p>
-      
+
+
+    <!-- Video information -->
+    <div class="video-info-grid">
+
+      <!-- Channel -->
+      <div class="channel-picture">
+
+        <img
+          class="profile-picture"
+          src="files/channel-1.jpeg"
+        >
+
+      </div>
+
+
+      <!-- Text -->
+      <div class="video-info">
+
+        <p class="intro">
+          Best Diet for Bulking
+        </p>
+
+        <p class="Author">
+          Sam Sulek
+        </p>
+
+        <p class="Stats">
+          3.4M views &middot; 6 months ago
+        </p>
+
+      </div>
+
     </div>
 
-  </body>
+  </div>
+
+
+
+  <!-- ================= VIDEO 2 ================= -->
+
+  <div class="video-preview">
+
+    <!-- Thumbnail -->
+    <div class="thumbnail-row">
+
+      <img
+        class="thumbnail"
+        src="files/hqdefault.avif"
+      >
+
+    </div>
+
+
+    <!-- Video information -->
+    <div class="video-info-grid">
+
+      <!-- Channel -->
+      <div class="channel-picture">
+
+        <img
+          class="profile-picture"
+          src="files/channel-2.jpeg"
+        >
+
+      </div>
+
+
+      <!-- Text -->
+      <div class="video-info">
+
+        <p class="intro">
+          Curse of Existence
+        </p>
+
+        <p class="Author">
+          Dostoevsky
+        </p>
+
+        <p class="Stats">
+          3.9M views &middot; 9 months ago
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</body>
+
 </html>
