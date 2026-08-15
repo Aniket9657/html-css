@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .B1
+      {
+        transition: 
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+        background-color:  #0084FF;
+        color:white;
+        margin-left: 150px;
+        margin-top:15px;
+        width:100px;
+      }
+      .B1:hover
+      {
+        background-color: #006ce6; /* Darker blue shade */
+        transform: translateY(-2px); /* Moves button slightly up */
+        box-shadow: 0 6px 12px rgba(0, 132, 255, 0.3); /* Deepens shadow */
+      }
+      .B1:active
+      {
+        transform: translateY(0); /* Pushes button back down */
+        box-shadow: 0 2px 4px rgba(0, 132, 255, 0.2);
+      }
+      .L1,.L2,.E1
+      {
+         border-radius: 8px;
+         padding: 10px 15px;
+         border: 1px solid #ccc;
+         margin-left: 15px;
+
+
+      }
+      .E1
+      {
+        display:block;
+        margin-top: 15px;
+        margin-left: 15px;
+        width: 389px;
+
+      }
+      
+
+
+    </style>
+
+  </head>
+  <body>
+<input class="L1" type="text" placeholder="First name">
+<input class="L2" type="text" placeholder="Last name">
+<input class="E1" type="text" placeholder="Email">
+<button class="B1">
+  Sign Up
+</button>
+
+
+  </body>
+</html>

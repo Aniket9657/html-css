@@ -5,16 +5,19 @@
     <style>
       .thumbnail
       {
-        display:block;
-       width: 200px;
+        display:inline-block;
+       width: 250px;
        height: 200px;
        object-fit: cover;
+       margin-top: 15px;
+      
        
 
       }
       .intro
       {
         width :300px;
+        margin: left 15px;
       }
 
      
@@ -22,22 +25,42 @@
       .search-bar
       {
         font-size: 20px;
-        margin-left: 12px;
+        margin: left 15px;
+        display:block;
         
       }
-
+      
+      .video-preview
+      {
+        width: 300px;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 15px;
+      }
     </style>
   </head>
   <body>
     <input class="search-bar" type="text" placeholder="Search">
-    <img  class="thumbnail"src="files/hq720.avif">
+    
+
+    <div class="video-preview">
+      <img  class="thumbnail"src="files/hq720.avif">
     
     
-    <p class="intro">Best diet for<strong> Bulking </strong></p>
+    <p class="intro">Best diet for Bulking </p>
     <p class="Author">Sam Sulek</p>
     <p class="Stats">3.4M views &middot; 6 months ago</p>
-
-
+      
+    </div>
+     <div class="video-preview">
+      <img  class="thumbnail"src="files/hqdefault.avif">
+    
+    
+    <p class="intro">Glow up Tips</strong></p>
+    <p class="Author">Alexzander</p>
+    <p class="Stats">3.9M views &middot; 9 months ago</p>
+      
+    </div>
 
   </body>
 </html>
