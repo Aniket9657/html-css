@@ -16,194 +16,332 @@
         rel="stylesheet">
 
 
-  <style>
-
-    p {
-      font-family: 'Roboto', Arial, sans-serif;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    /* Search bar */
-    .search-bar {
-      font-size: 20px;
-      margin-left: 15px;
-      display: block;
-    }
-
-    /* Video card */
-    .video-preview {
-      width: 300px;
-      display: inline-block;
-      vertical-align: top;
-      margin-right: 15px;
-    }
-
-    /* Thumbnail */
-    .thumbnail {
-      display: block;
-      width: 100%;
-      height: 170px;
-      object-fit: cover;
-    }
-
-    .thumbnail-row {
-      margin-bottom: 10px;
-    }
-
-    /* Channel picture */
-    .channel-picture {
-      
-    }
-
-    .profile-picture {
-      width: 100%;
-      border-radius: 40px;
-      display: block;
-    }
-
-    /* Video information */
-    .video-info {
-      
-    }
-
-    .intro {
-      margin-top: 0;
-    }
-
-    .Author,
-    .Stats {
-      font-size: 12px;
-      color: rgb(96, 96, 96);
-    }
-
-    .Author {
-      margin-bottom: 4px;
-    }
-
-    /* Channel picture + video information */
-    .video-info-grid {
-      display: grid;
-      grid-template-columns: 50px 1fr;
-      column-gap: 10px;
-    }
-
-  </style>
+  
+<link rel="stylesheet" href="styles/general.css">
+<link rel="stylesheet" href="styles/header.css">
+<link rel="stylesheet" href="styles/video.css">
 
 </head>
 
 
 <body>
 
-  <!-- Search -->
-  <input
+  <div class="header">
+    <div class="left-section">
+      left section
+    </div>
+    <div class="middle-section">
+      <input
     class="search-bar"
     type="text"
     placeholder="Search"
   >
-
-
-  <!-- ================= VIDEO 1 ================= -->
-
-  <div class="video-preview">
-
-    <!-- Thumbnail -->
-    <div class="thumbnail-row">
-
-      <img
-        class="thumbnail"
-        src="files/hq720.avif"
-      >
-
     </div>
+    <div class="right-section">
+      right section
+    </div>
+    <!-- Search -->
+  
+
+  </div>
+
+  
+
+  <!-- =================================
+       VIDEO GRID START
+       ================================= -->
+
+       
+  <div class="video-grid">
 
 
-    <!-- Video information -->
-    <div class="video-info-grid">
+    <!-- ========== VIDEO 1 ========== -->
 
-      <!-- Channel -->
-      <div class="channel-picture">
+    <div class="video-preview">
+
+      <div class="thumbnail-row">
 
         <img
-          class="profile-picture"
-          src="files/channel-1.jpeg"
+          class="thumbnail"
+          src="files/hq720.avif"
         >
 
       </div>
 
 
-      <!-- Text -->
-      <div class="video-info">
+      <div class="video-info-grid">
 
-        <p class="intro">
-          Best Diet for Bulking
-        </p>
+        <div class="channel-picture">
 
-        <p class="Author">
-          Sam Sulek
-        </p>
+          <img
+            class="profile-picture"
+            src="files/channel-1.jpeg"
+          >
 
-        <p class="Stats">
-          3.4M views &middot; 6 months ago
-        </p>
+        </div>
+
+
+        <div class="video-info">
+
+          <p class="intro">
+            Best Diet for Bulking
+          </p>
+
+          <p class="Author">
+            Sam Sulek
+          </p>
+
+          <p class="Stats">
+            3.4M views &middot; 6 months ago
+          </p>
+
+        </div>
 
       </div>
 
     </div>
 
-  </div>
 
+    <!-- ========== VIDEO 2 ========== -->
 
+    <div class="video-preview">
 
-  <!-- ================= VIDEO 2 ================= -->
-
-  <div class="video-preview">
-
-    <!-- Thumbnail -->
-    <div class="thumbnail-row">
-
-      <img
-        class="thumbnail"
-        src="files/hqdefault.avif"
-      >
-
-    </div>
-
-
-    <!-- Video information -->
-    <div class="video-info-grid">
-
-      <!-- Channel -->
-      <div class="channel-picture">
+      <div class="thumbnail-row">
 
         <img
-          class="profile-picture"
-          src="files/channel-2.jpeg"
+          class="thumbnail"
+          src="files/hqdefault.avif"
         >
 
       </div>
 
 
-      <!-- Text -->
-      <div class="video-info">
+      <div class="video-info-grid">
 
-        <p class="intro">
-          Curse of Existence
-        </p>
+        <div class="channel-picture">
 
-        <p class="Author">
-          Dostoevsky
-        </p>
+          <img
+            class="profile-picture"
+            src="files/channel-2.jpeg"
+          >
 
-        <p class="Stats">
-          3.9M views &middot; 9 months ago
-        </p>
+        </div>
+
+
+        <div class="video-info">
+
+          <p class="intro">
+            Curse of Existence
+          </p>
+
+          <p class="Author">
+            Dostoevsky
+          </p>
+
+          <p class="Stats">
+            3.9M views &middot; 9 months ago
+          </p>
+
+        </div>
 
       </div>
 
     </div>
 
+
+    <!-- ========== VIDEO 3 ========== -->
+
+    <div class="video-preview">
+
+      <div class="thumbnail-row">
+
+        <img
+          class="thumbnail"
+          src="files/thumbnail-3.webp"
+        >
+
+      </div>
+
+
+      <div class="video-info-grid">
+
+        <div class="channel-picture">
+
+          <img
+            class="profile-picture"
+            src="files/channel-3.jpeg"
+          >
+
+        </div>
+
+
+        <div class="video-info">
+
+          <p class="intro">
+            Crazy Tik Toks Taken Moments Before DISASTER
+          </p>
+
+          <p class="Author">
+            SSSniperWOLF
+          </p>
+
+          <p class="Stats">
+            12M views &middot; 1 year ago
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ========== VIDEO 4 ========== -->
+
+    <div class="video-preview">
+
+      <div class="thumbnail-row">
+
+        <img
+          class="thumbnail"
+          src="files/thumbnail-4.webp"
+        >
+
+      </div>
+
+
+      <div class="video-info-grid">
+
+        <div class="channel-picture">
+
+          <img
+            class="profile-picture"
+            src="files/channel-4.jpeg"
+          >
+
+        </div>
+
+
+        <div class="video-info">
+
+          <p class="intro">
+            The Simplest Math Problem No One CAn Solve -Collatz Conjecture
+          </p>
+
+          <p class="Author">
+            Vertasium
+          </p>
+
+          <p class="Stats">
+            18M views &middot; 4 months ago
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ========== VIDEO 5 ========== -->
+
+    <div class="video-preview">
+
+      <div class="thumbnail-row">
+
+        <img
+          class="thumbnail"
+          src="files/thumbnail-5.webp"
+        >
+
+      </div>
+
+
+      <div class="video-info-grid">
+
+        <div class="channel-picture">
+
+          <img
+            class="profile-picture"
+            src="files/channel-5.jpeg"
+          >
+
+        </div>
+
+
+        <div class="video-info">
+
+          <p class="intro">
+            Kadane's Algorithm to Maximum Sum Subarray Problem
+          </p>
+
+          <p class="Author">
+            CS Dojo
+          </p>
+
+          <p class="Stats">
+            519k views &middot; 5 years ago
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ========== VIDEO 6 ========== -->
+
+    <div class="video-preview">
+
+      <div class="thumbnail-row">
+
+        <img
+          class="thumbnail"
+          src="files/thumbnail-6.webp"
+        >
+
+      </div>
+
+
+      <div class="video-info-grid">
+
+        <div class="channel-picture">
+
+          <img
+            class="profile-picture"
+            src="files/channel-6.jpeg"
+          >
+
+        </div>
+
+
+        <div class="video-info">
+
+          <p class="intro">
+            Anuthing You Can Fit In The Circle I'll Pay For
+          </p>
+
+          <p class="Author">
+            MrBeast
+          </p>
+
+          <p class="Stats">
+            141M views &middot; 1 year ago
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
   </div>
+
+  <!-- =================================
+       VIDEO GRID END
+       ================================= -->
 
 
 </body>
