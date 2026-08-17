@@ -12,63 +12,134 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
 
-
-  
-<link rel="stylesheet" href="styles/general.css">
-<link rel="stylesheet" href="styles/header.css">
-<link rel="stylesheet" href="styles/video.css">
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/video.css">
+  <link rel="stylesheet" href="styles/sidebar.css">
 
 </head>
 
 
 <body>
 
+
+  <!-- ================= HEADER ================= -->
+
   <div class="header">
+
     <div class="left-section">
-      <img  class="hamburger-menu"src="files/hamburger-menu.svg">
-      <img class="youtube-logo" src="files/youtube-logo.svg">
-      
+
+      <img
+        class="hamburger-menu"
+        src="files/hamburger-menu.svg"
+      >
+
+      <img
+        class="youtube-logo"
+        src="files/youtube-logo.svg"
+      >
+
     </div>
+
+
     <div class="middle-section">
+
       <input
-    class="search-bar"
-    type="text"
-    placeholder="Search"
-  >
-  <button class="search-button">
-    <img
-    class="search-icon" 
-    src="files/search.svg">
+        class="search-bar"
+        type="text"
+        placeholder="Search"
+      >
 
-  </button>
-  <button class="voice-search-button">
-    <img  class="voice-search-icon"src="files/voice-search-icon.svg">
-  </button>
+      <button class="search-button">
+
+        <img
+          class="search-icon"
+          src="files/search.svg"
+        >
+
+      </button>
+
+
+      <button class="voice-search-button">
+
+        <img
+          class="voice-search-icon"
+          src="files/voice-search-icon.svg"
+        >
+
+      </button>
+
     </div>
+
+
     <div class="right-section">
-     <img  class="upload-icon"src="files/upload.svg">
-     <img  class="youtube-apps-icon"src="files/youtube-apps.svg">
-     <img  class="notifications-icon"src="files/notifications.svg">
-     <img 
-     class="current-user-picture" 
-     src="files/profile.jpg">
+
+      <img
+        class="upload-icon"
+        src="files/upload.svg"
+      >
+
+      <img
+        class="youtube-apps-icon"
+        src="files/youtube-apps.svg"
+      >
+
+      <div class="notifications-icon-container">
+        <img
+        class="notifications-icon"
+        src="files/notifications.svg"
+      >
+      <div class="notifications-count">3</div>
+      </div>
+
+      <img
+        class="current-user-picture"
+        src="files/profile.jpg"
+      >
 
     </div>
-    <!-- Search -->
-  
 
   </div>
 
-  
 
-  <!-- =================================
-       VIDEO GRID START
-       ================================= -->
+  <!-- ================= SIDEBAR ================= -->
 
-       
+  <div class="sidebar">
+    <div class="sidebar-link">
+      <img src="files/home.svg">
+      <div>Home</div>
+    </div>
+    <div class="sidebar-link">
+      <img src="files/explore.svg">
+      <div>Explore</div>
+    </div>
+    <div class="sidebar-link">
+      <img src="files/subscriptions.svg">
+      <div>Subscriptions</div>
+    </div>
+    <div class="sidebar-link">
+      <img src="files/originals.svg">
+      <div>Originals</div>
+    </div>
+    <div class="sidebar-link">
+      <img src="files/youtube-music.svg">
+      <div>YouTube Music</div>
+    </div>
+    <div class="sidebar-link">
+      <img src="files/library.svg">
+      <div>Library</div>
+    </div>
+  </div>
+
+
+  <!-- ================= VIDEO GRID ================= -->
+
   <div class="video-grid">
 
 
@@ -82,6 +153,10 @@
           class="thumbnail"
           src="files/hq720.avif"
         >
+
+        <div class="video-time">
+          14:20
+        </div>
 
       </div>
 
@@ -130,6 +205,10 @@
           src="files/hqdefault.avif"
         >
 
+        <div class="video-time">
+          4:20
+        </div>
+
       </div>
 
 
@@ -176,6 +255,10 @@
           class="thumbnail"
           src="files/thumbnail-3.webp"
         >
+
+        <div class="video-time">
+          14:00
+        </div>
 
       </div>
 
@@ -224,6 +307,10 @@
           src="files/thumbnail-4.webp"
         >
 
+        <div class="video-time">
+          14:20
+        </div>
+
       </div>
 
 
@@ -242,11 +329,12 @@
         <div class="video-info">
 
           <p class="intro">
-            The Simplest Math Problem No One CAn Solve -Collatz Conjecture
+            The Simplest Math Problem No One Can Solve -
+            Collatz Conjecture
           </p>
 
           <p class="Author">
-            Vertasium
+            Veritasium
           </p>
 
           <p class="Stats">
@@ -270,6 +358,10 @@
           class="thumbnail"
           src="files/thumbnail-5.webp"
         >
+
+        <div class="video-time">
+          9:20
+        </div>
 
       </div>
 
@@ -297,7 +389,7 @@
           </p>
 
           <p class="Stats">
-            519k views &middot; 5 years ago
+            519K views &middot; 5 years ago
           </p>
 
         </div>
@@ -318,6 +410,10 @@
           src="files/thumbnail-6.webp"
         >
 
+        <div class="video-time">
+          14:45
+        </div>
+
       </div>
 
 
@@ -336,7 +432,8 @@
         <div class="video-info">
 
           <p class="intro">
-            Anuthing You Can Fit In The Circle I'll Pay For
+            Anything You Can Fit In The Circle
+            I'll Pay For
           </p>
 
           <p class="Author">
@@ -355,10 +452,6 @@
 
 
   </div>
-
-  <!-- =================================
-       VIDEO GRID END
-       ================================= -->
 
 
 </body>
