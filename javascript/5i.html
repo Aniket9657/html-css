@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart quantity</title>
+  </head>
+  <body>
+
+    <p>
+      Cart Quantity
+
+
+    </p>
+    <div>
+      <button onclick="
+      console.log(`cart Quantity: ${cartQuantity}`); //this backticks ` are used so that we can use ${} in our code --template string
+      ">Show Quantity</button>
+      <button onclick="
+      
+      cartQuantity=cartQuantity+1;
+      console.log(`cart Quantity: ${cartQuantity}`);
+
+      ">Add to Cart</button>
+      <button onclick="
+
+      cartQuantity=cartQuantity+2;
+      console.log(`cart Quantity: ${cartQuantity}`);
+      
+      
+      ">+2</button>
+
+
+      <button onclick="
+      cartQuantity=cartQuantity+3;
+      console.log(`cart Quantity: ${cartQuantity}`);
+      ">+3</button>
+
+
+      <button onclick="
+      cartQuantity=0;
+      console.log(`cart Quantity: ${cartQuantity}`);
+      ">Reset Cart</button>
+
+    </div>
+
+
+
+    <script>
+
+      let cartQuantity = 0;
+
+
+    </script>
+  </body>
+</html>
