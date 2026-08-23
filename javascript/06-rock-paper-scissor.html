@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock-Paper-Scissors</title>
+  </head>
+
+  <body>
+
+    <p>Rock Paper Scissors</p>
+
+    <!-- ================= ROCK ================= -->
+
+    <button onclick="
+      const randomNumber = Math.random();
+
+      let computerMove = '';
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = 'rock';
+      }
+      else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = 'paper';
+      }
+
+      // ❌ MISTAKE 1:
+      // You wrote:
+      // else if (randomNumber >= 2 / 3 && randomNumber > 1);
+      //
+      // Math.random() NEVER gives a number greater than or equal to 1.
+      // It always gives: 0 <= randomNumber < 1
+      //
+      // Also, you put ';' after the else-if condition.
+      // That ends the else-if statement.
+      //
+      // Correct:
+      else if (randomNumber >= 2 / 3) {
+        computerMove = 'scissors';
+      }
+
+
+      let result = '';
+
+      if (computerMove === 'rock') {
+        result = 'Tie.';
+      }
+      else if (computerMove === 'paper') {
+        result = 'You lose.';
+      }
+      else if (computerMove === 'scissors') {
+        result = 'You win.';
+      }
+
+
+      // ❌ MISTAKE 2:
+      // You wrote ${randomMove}
+      //
+      // But you never created a variable called randomMove.
+      //
+      // The player's move is Rock, so use 'rock'.
+      alert(
+        `You picked rock. Computer picked ${computerMove}. ${result}`
+      );
+
+    ">Rock</button>
+
+
+
+    <!-- ================= PAPER ================= -->
+
+    <button onclick="
+      const randomNumber = Math.random();
+
+      let computerMove = '';
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = 'rock';
+      }
+      else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = 'paper';
+      }
+
+      // ❌ Same mistake as above:
+      // randomNumber > 1 is impossible.
+      // Don't put ';' after else-if.
+      else if (randomNumber >= 2 / 3) {
+        computerMove = 'scissors';
+      }
+
+
+      let result = '';
+
+      if (computerMove === 'rock') {
+        result = 'You win.';
+      }
+      else if (computerMove === 'paper') {
+        result = 'Tie.';
+      }
+      else if (computerMove === 'scissors') {
+        result = 'You lose.';
+      }
+
+
+      alert(
+        `You picked paper. Computer picked ${computerMove}. ${result}`
+      );
+
+    ">Paper</button>
+
+
+
+    <!-- ================= SCISSORS ================= -->
+
+    <button onclick="
+      const randomNumber = Math.random();
+
+      let computerMove = '';
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = 'rock';
+      }
+      else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = 'paper';
+      }
+
+      // ❌ Same mistake:
+      // You had:
+      // randomNumber >= 2 / 3 && randomNumber > 1
+      //
+      // randomNumber > 1 can NEVER happen.
+      //
+      // You also had ';' after the condition.
+      else if (randomNumber >= 2 / 3) {
+        computerMove = 'scissors';
+      }
+
+
+      let result = '';
+
+      if (computerMove === 'rock') {
+        result = 'You lose.';
+      }
+      else if (computerMove === 'paper') {
+        result = 'You win.';
+      }
+      else if (computerMove === 'scissors') {
+
+        // ❌ MISTAKE 3:
+        // You wrote:
+        // result = 'You lose.';
+        //
+        // Scissors vs Scissors is a TIE.
+        result = 'Tie.';
+      }
+
+
+      // ❌ MISTAKE 4:
+      // Again, randomMove doesn't exist.
+      //
+      // Correct player's choice is 'scissors'.
+      alert(
+        `You picked scissors. Computer picked ${computerMove}. ${result}`
+      );
+
+    ">Scissors</button>
+
+
+    <script>
+
+    </script>
+
+  </body>
+</html>
