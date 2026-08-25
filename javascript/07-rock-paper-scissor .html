@@ -11,136 +11,103 @@
     <!-- ================= ROCK ================= -->
 
     <button onclick="
-      const computerMove = pickComputerMove();
-
-
-      let result = '';
-
-      if (computerMove === 'rock') {
-        result = 'Tie.';
-      }
-      else if (computerMove === 'paper') {
-        result = 'You lose.';
-      }
-      else if (computerMove === 'scissors') {
-        result = 'You win.';
-      }
-
-
-      // ❌ MISTAKE 2:
-      // You wrote ${randomMove}
-      //
-      // But you never created a variable called randomMove.
-      //
-      // The player's move is Rock, so use 'rock'.
-      alert(
-        `You picked rock. Computer picked ${computerMove}. ${result}`
-      );
-
+      playGame('rock');
     ">Rock</button>
-
 
 
     <!-- ================= PAPER ================= -->
 
     <button onclick="
-      const computerMove = pickComputerMove();
-
-
-      let result = '';
-
-      if (computerMove === 'rock') {
-        result = 'You win.';
-      }
-      else if (computerMove === 'paper') {
-        result = 'Tie.';
-      }
-      else if (computerMove === 'scissors') {
-        result = 'You lose.';
-      }
-
-
-      alert(
-        `You picked paper. Computer picked ${computerMove}. ${result}`
-      );
-
+      playGame('paper');
     ">Paper</button>
-
 
 
     <!-- ================= SCISSORS ================= -->
 
     <button onclick="
-      
-
-
-      
-
-
-      // ❌ MISTAKE 4:
-      // Again, randomMove doesn't exist.
-      //
-      // Correct player's choice is 'scissors'.
-      
-
+      playGame('scissors');
     ">Scissors</button>
 
 
     <script>
 
-   
-      function playGame(playerMove){
+      function playGame(playerMove) {
+
+        // Generate a computer move every time the player clicks
+        const computerMove = pickComputerMove();
+
         let result = '';
 
-      if (computerMove === 'rock') {
-        result = 'You lose.';
+        // Rock
+        if (playerMove === 'rock') {
+
+          if (computerMove === 'rock') {
+            result = 'Tie.';
+          }
+          else if (computerMove === 'paper') {
+            result = 'You lose.';
+          }
+          else if (computerMove === 'scissors') {
+            result = 'You win.';
+          }
+
+        }
+
+        // Paper
+        else if (playerMove === 'paper') {
+
+          if (computerMove === 'rock') {
+            result = 'You win.';
+          }
+          else if (computerMove === 'paper') {
+            result = 'Tie.';
+          }
+          else if (computerMove === 'scissors') {
+            result = 'You lose.';
+          }
+
+        }
+
+        // Scissors
+        else if (playerMove === 'scissors') {
+
+          if (computerMove === 'rock') {
+            result = 'You lose.';
+          }
+          else if (computerMove === 'paper') {
+            result = 'You win.';
+          }
+          else if (computerMove === 'scissors') {
+            result = 'Tie.';
+          }
+
+        }
+
+        alert(
+          `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
+        );
       }
-      else if (computerMove === 'paper') {
-        result = 'You win.';
-      }
-      else if (computerMove === 'scissors') {
-
-        // ❌ MISTAKE 3:
-        // You wrote:
-        // result = 'You lose.';
-        //
-        // Scissors vs Scissors is a TIE.
-        result = 'Tie.';
-      }
-      alert(
-        `You picked scissors. Computer picked ${computerMove}. ${result}`
-      );
 
 
-      }
+      function pickComputerMove() {
 
-    function pickComputerMove() {
+        let computerMove = '';
 
-      let computerMove = '';
-     const randomNumber = Math.random();
+        const randomNumber = Math.random();
 
-      
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          computerMove = 'rock';
+        }
+        else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+          computerMove = 'paper';
+        }
+        else if (randomNumber >= 2 / 3) {
+          computerMove = 'scissors';
+        }
 
-      if (randomNumber >= 0 && randomNumber < 1 / 3) {
-        computerMove = 'rock';
-      }
-      else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-        computerMove = 'paper';
+        return computerMove;
       }
 
-      // ❌ Same mistake:
-      // You had:
-      // randomNumber >= 2 / 3 && randomNumber > 1
-      //
-      // randomNumber > 1 can NEVER happen.
-      //
-      // You also had ';' after the condition.
-      else if (randomNumber >= 2 / 3) {
-        computerMove = 'scissors';
-      }
-
-      return  computerMove;
-      }
     </script>
 
   </body>
