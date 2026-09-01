@@ -25,19 +25,28 @@
 
     <p class="js-score"></p>
 
+    <button onclick="
+      reset();
+    ">Reset Score</button>
+
+
     <script>
 
-      // Get the saved score from localStorage.
+      // Get saved score from localStorage.
       // If there is no saved score, create a new score object.
+
       let score = JSON.parse(localStorage.getItem('score')) || {
         wins: 0,
         losses: 0,
         ties: 0
       };
 
-      // Display the score when the page loads.
+
+      // Display score when page loads.
       displayScore();
 
+
+      // ================= PLAY GAME =================
 
       function playGame(playerMove) {
 
@@ -111,18 +120,22 @@
         }
 
 
-        // Save updated score in localStorage.
-        localStorage.setItem('score', JSON.stringify(score));
+        // Save updated score.
+        localStorage.setItem(
+          'score',
+          JSON.stringify(score)
+        );
 
 
-        // Display updated score on the webpage.
+        // Display updated score.
         displayScore();
 
 
-        // Show game result.
+        // Show result.
         alert(
           `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
         );
+
       }
 
 
@@ -154,6 +167,31 @@
 
         document.querySelector('.js-score').innerHTML =
           `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+
+      }
+
+
+      // ================= RESET SCORE =================
+
+      function reset() {
+
+        // Create a new score with all values set to 0.
+        score = {
+          wins: 0,
+          losses: 0,
+          ties: 0
+        };
+
+
+        // Save the reset score to localStorage.
+        localStorage.setItem(
+          'score',
+          JSON.stringify(score)
+        );
+
+
+        // Update the score displayed on the page.
+        displayScore();
 
       }
 
